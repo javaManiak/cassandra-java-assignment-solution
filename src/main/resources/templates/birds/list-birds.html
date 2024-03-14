@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header" />
+
+<body>
+
+	<nav th:replace="layouts :: NavBar" />
+	
+	<div class = "container">
+		<h3> Satellite Scanned Birds </h3>
+		<hr>
+		<!-- Add New Employee Button -->
+		<a th:href="@{/bird/new}"
+		class="btn btn-primary btn-sm mb-3">
+			Add Bird Scanned
+		</a>
+		<br></br>
+		
+		<table class="table table table-bordered table-stripped">
+			<thead class="thead-dark">
+				<tr>
+					<th> ID</th>
+					<th> Scan Location (Longitude,Latitude) </th>
+					<th> Species </th>
+					<th> Traits </th>
+					<th> Scan Date </th>
+				</tr>
+			</thead>
+			<tboday>
+				<tr th:each="aBird : ${birds}">
+					<td th:text="${aBird.birdId}" />
+					<td th:text="${aBird.birdLocation}" />
+					<td th:text="${aBird.birdSpecies}" />
+					<td th:text="${aBird.birdTraits}" />
+					<td th:text="${aBird.scanDate}" />
+				</tr>
+			</tboday>
+		</table>
+	</div>
+</body>
+
+</html>
