@@ -33,7 +33,7 @@ public class ScanBirdService {
 
 	public List<ScanBird> findByBirdLocationAndScanDate(String birdLocation, String scanDate) {
 		
-		List<ScanBird> birdFoundByLocation = birdRepo.findByLocation(birdLocation);
+		List<ScanBird> birdFoundByLocation = birdRepo.findByBirdLocation(birdLocation);
 		List<ScanBird> birdByLocationAndDate = new ArrayList<>();
 		
 		for (ScanBird bird : birdFoundByLocation) {

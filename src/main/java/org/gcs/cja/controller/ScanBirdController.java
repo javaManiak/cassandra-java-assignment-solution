@@ -64,10 +64,10 @@ public class ScanBirdController {
 		return "birds/list-birds";
 	}
 	
-	@GetMapping("/birds/search/{birdLocation}/{scanDate)")
+	@GetMapping("/birds/search")
 	public String searchScanBirdLocation(@RequestParam("birdLocation")String theLocation, @RequestParam("scanDate") String theDate, Model model ) {
 		List<ScanBird> theBirds = birdService.findByBirdLocationAndScanDate(theLocation, theDate);
-		model.addAttribute("birds",theBirds.toArray());
+		model.addAllAttributes(theBirds);
 		return "birds/search-birds";
 	}
 	

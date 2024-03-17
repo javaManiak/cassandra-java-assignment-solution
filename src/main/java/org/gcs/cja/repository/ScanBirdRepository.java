@@ -10,6 +10,6 @@ public interface ScanBirdRepository extends CrudRepository<ScanBird, UUID> {
 
 	ScanBird findByBirdId(UUID theId);
 
-	List<ScanBird> findByLocation(String theLocation);
+	List<ScanBird> findByBirdLocation(String theLocation);
 	
 }
