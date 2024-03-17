@@ -52,4 +52,7 @@
    3. Likewise, there are many things could be done to improve the project - it's just a matter of time.
    
    4. I would like discuss about the solution if interested.
+   
+   5. Security (Authentication and Authorization) would be the next things to consider to add in for production.
+   
 	
