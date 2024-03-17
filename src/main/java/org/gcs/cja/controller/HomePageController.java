@@ -37,16 +37,6 @@ public class HomePageController {
 
 		List<ScanBird> birds = (List<ScanBird>) birdRepo.findAll();
 		model.addAttribute("birds", birds);
-		
-//		List<ChartData> birdData= birdRepo.getBirdSpecies();
-		
-//		// let's convert resultData object into a JSON structure for use in javaScript
-//		ObjectMapper objectMapper = new ObjectMapper();
-//		String jsonString = objectMapper.writeValueAsString(birdData);
-//		// [["LANDBIRD", 1], ["WATERBIRD", 2] ,["AMPHI-BIRD", 1]]
-//				
-//		model.addAttribute("birdSpeciesCnt", jsonString);
-		
 		return "main/home";
 	}	
 

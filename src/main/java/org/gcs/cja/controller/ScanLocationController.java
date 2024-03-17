@@ -39,5 +39,20 @@ public class ScanLocationController {
 		// use a redirect to prevent duplicated submissions
 		return "redirect:/location/new";
 	}
+	
+//	@GetMapping("/update")
+//	public String displayLocationUpdateForm(@RequestParam("id") UUID theId, Model model ) {
+//		Location theLocation = locService.findByLocationId(theId);
+//		model.addAttribute("location", theLocation);
+//		return "locations/new-location";
+//	}
+//	
+//	
+//	@GetMapping("/delete")
+//	public String deleteLocation(@RequestParam("id") UUID theId, Model model ) {
+//		Location theLocation = locService.findByLocationId(theId);
+//		locService.delete(theLocation);
+//		return "birds/list-birds";
+//	}
 
 }
