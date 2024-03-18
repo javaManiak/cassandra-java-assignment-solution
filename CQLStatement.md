@@ -29,11 +29,15 @@ Use this file to include your DDL.  Also include any DML that you may have creat
      drop table birds;
 
 ## DML (if any)
+
    - Populate dummy data into tables 
 
-     - locations
+
+   - locations
+
     
 		begin batch
+		
 			insert into locations(locationid, location, name) values(now(), '33N,84W', 'Atlanta');
 			insert into locations(locationid, location, name) values(now(), '32N,96W', 'Dallas');
 			insert into locations(locationid, location, name) values(now(), '29N,95W', 'Houston');
@@ -51,11 +55,15 @@ Use this file to include your DDL.  Also include any DML that you may have creat
 			
 			insert into locations(locationid, location, name) values(now(), '64N,20W', 'Iceland');
 			insert into locations(locationid, location, name) values(now(), '34S,23E', 'South Africa');
+
 		apply batch;
 		
-     - birds
+
+   - birds
+
 
 		begin batch
+		
 			insert into birds(birdid, birdLocation, birdSpecies, birdTraits, scandate) values(now(), '33N,84W', 'Humming bird', 'small, agile, hooked beak', '2024-09-18');
 			insert into birds(birdid, birdLocation, birdSpecies, birdTraits, scandate) values(now(), '32N,96W', 'Special loon', 'blue eyes, swim and dive, webbed feet', '2024-03-27');
 			insert into birds(birdid, birdLocation, birdSpecies, birdTraits, scandate) values(now(), '29N,95W', 'Common loon', 'red eyes, swim and dive, webbed feet', '2025-02-27');
@@ -72,8 +80,9 @@ Use this file to include your DDL.  Also include any DML that you may have creat
 			insert into birds(birdid, birdLocation, birdSpecies, birdTraits, scandate) values(now(), '34S,23E', 'Special loon', 'blue eyes, swim and dive, webbed feet', '2024-11-27');
 		
 		apply batch;
+		
 	    
-   - read the scan results for a specific location on a given day (from database table - birds)
+   - Read the scan results for a specific location on a given day (from database table - birds)
 
        select * from birds where location = '49N,124W' and scandate = '2021-08-27' allow filtering;
 
@@ -82,3 +91,4 @@ Use this file to include your DDL.  Also include any DML that you may have creat
        truncate locations;
    
        truncate birds;
+       
